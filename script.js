@@ -1,55 +1,76 @@
 const questions = [
     {
-        question: "What is 20% of 150?",
-        options: ["15", "30", "25", "35"],
-        correct: 1
-    },
-    {
-        question: "If an item costs $200 and is sold at a 25% discount, what is the discounted price?",
-        options: ["$150", "$175", "$125", "$160"],
+        question: "What is the sum of the interior angles of a hexagon?",
+        options: ["720°", "540°", "360°", "1080°"],
         correct: 0
     },
     {
-        question: "What is the result of approximating 47.89 to the nearest whole number?",
-        options: ["48", "47", "50", "46"],
+        question: "What is the formula for the sum of the interior angles of an n-sided polygon?",
+        options: ["(n - 2) × 180°", "(n × 180°) / 2", "(n - 1) × 180°", "(n - 2) × 360°"],
         correct: 0
     },
     {
-        question: "A profit margin of 15% on an item sold for $300 means a profit of:",
-        options: ["$45", "$60", "$50", "$40"],
+        question: "What is the measure of each exterior angle of a regular pentagon?",
+        options: ["72°", "108°", "60°", "90°"],
         correct: 0
     },
     {
-        question: "What is 75% of 80?",
-        options: ["60", "65", "55", "70"],
+        question: "The opposite angles of a cyclic quadrilateral sum up to:",
+        options: ["180°", "90°", "360°", "120°"],
         correct: 0
     },
     {
-        question: "Round 3.678 to the nearest hundredth",
-        options: ["3.68", "3.67", "3.70", "3.66"],
+        question: "What is the relationship between the angle subtended by an arc at the center of a circle and at any point on the circumference?",
+        options: [
+            "The angle at the center is twice the angle at the circumference",
+            "The angles are equal",
+            "The angle at the center is half the angle at the circumference",
+            "The angle at the circumference is always 90°"
+        ],
         correct: 0
     },
     {
-        question: "What is the percentage increase from 40 to 50?",
-        options: ["20%", "25%", "15%", "10%"],
-        correct: 1
-    },
-    {
-        question: "Approximate 16.7 × 3.9 to the nearest ten",
-        options: ["60", "70", "65", "55"],
-        correct: 1
-    },
-    {
-        question: "If 30% of a number is 45, what is the number?",
-        options: ["150", "135", "165", "140"],
+        question: "A tangent to a circle is:",
+        options: [
+            "A line that touches the circle at exactly one point",
+            "A line that passes through the circle",
+            "A line that intersects the circle at two points",
+            "A line that is parallel to the radius"
+        ],
         correct: 0
     },
     {
-        question: "Round 0.6837 to the nearest tenth",
-        options: ["0.7", "0.6", "0.68", "0.69"],
+        question: "What is the sum of the exterior angles of any polygon?",
+        options: ["360°", "180°", "540°", "720°"],
+        correct: 0
+    },
+    {
+        question: "In a circle, the angle in a semicircle is always:",
+        options: ["90°", "180°", "60°", "120°"],
+        correct: 0
+    },
+    {
+        question: "If two chords in a circle are equal, what can be said about their corresponding arcs?",
+        options: [
+            "The arcs are equal",
+            "The arcs are different",
+            "One arc is twice the other",
+            "The arcs subtend different angles at the center"
+        ],
+        correct: 0
+    },
+    {
+        question: "What is the relationship between a radius and a tangent at the point of contact?",
+        options: [
+            "The radius is perpendicular to the tangent",
+            "The radius is parallel to the tangent",
+            "The radius is equal in length to the tangent",
+            "The radius and tangent do not intersect"
+        ],
         correct: 0
     }
 ];
+
 
 let currentQuestion = 0;
 let score = 0;
