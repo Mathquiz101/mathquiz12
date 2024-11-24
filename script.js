@@ -191,21 +191,10 @@ function endQuiz() {
         <p>Performance Rating: ${getPerformanceRating(percentage)}</p>
     `;
 
-    // Show next level link if score is above 50%
-    if (percentage > 50) {
-        const nextLevelContainer = document.getElementById('next-level-container');
-        const nextLevelLink = document.getElementById('next-level-link');
-        const link = 'https://waecmathsuccess.github.io/mathlevel2/';
-        
-        nextLevelLink.href = link;
-        nextLevelLink.textContent = link;
-        nextLevelContainer.classList.remove('hide');
-        
-        // Add celebration animation
-        nextLevelContainer.classList.add('celebration');
-        setTimeout(() => {
-            nextLevelContainer.classList.remove('celebration');
-        }, 1000);
+    // Show premium product section
+    const premiumProduct = document.getElementById('premium-product');
+    if (premiumProduct) {
+        premiumProduct.classList.remove('hide');
     }
 }
 
@@ -217,15 +206,47 @@ function getPerformanceRating(percentage) {
     return "Need More Practice 💪";
 }
 
-function copyLink() {
-    const link = document.getElementById('next-level-link').href;
-    navigator.clipboard.writeText(link).then(() => {
-        const copyBtn = document.querySelector('.copy-btn');
-        copyBtn.textContent = 'Copied!';
-        copyBtn.style.backgroundColor = '#27ae60';
-        setTimeout(() => {
-            copyBtn.textContent = 'Copy Link';
-            copyBtn.style.backgroundColor = '#2ecc71';
-        }, 2000);
+// Button click handlers for premium product
+document.querySelectorAll('.cta-button').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const plan = this.getAttribute('data-plan');
+        const message = plan === 'free' 
+            ? 'Welcome to Basic Mathematics Learning! Start your journey today.'
+            : 'Welcome to Premium Mathematics Learning! Unlock all advanced features for $50';
+        
+        // Add click animation
+        const ripple = document.createElement('div');
+        ripple.style.position = 'absolute';
+        ripple.style.background = 'rgba(255, 255, 255, 0.3)';
+        ripple.style.borderRadius = '50%';
+        ripple.style.transformOrigin = 'center';
+        ripple.style.animation = 'ripple 0.6s linear';
+        ripple.style.left = `${e.offsetX}px`;
+        ripple.style.top = `${e.offsetY}px`;
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+        alert(message);
     });
-}
+});
+
+// Add hover effects to pricing cards
+document.querySelectorAll('.pricing-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const angleX = (y - centerY) / 30;
+        const angleY = (centerX - x) / 30;
+        
+        card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) translateZ(10px)`;
+    });
+
+    card.addEventListener('mouseleave', () => {
+        card.style.transform = 'none';
+    });
+});
