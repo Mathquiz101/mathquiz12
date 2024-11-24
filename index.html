@@ -27,17 +27,50 @@
         </div>
         <div id="result-screen" class="hide">
             <div class="result"></div>
-            <div id="next-level-container" class="hide next-level-link">
-                <h3>🎉 Congratulations! You've Completed the Quiz! 🎉</h3>
-                <p>Your special access link:</p>
-                <a href="#" id="next-level-link" target="_blank"></a>
-                <br>
-                <button class="copy-btn" onclick="copyLink()">Copy Link</button>
-                <div class="save-reminder">
-                    ⚠️ Important: Save this link! Without it, you won't be able to access the materials again.
+            <div style="margin: 2rem 0;"></div>
+            <div id="premium-product" class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="card-header">
+                        <h2 class="plan-name">Basic Learning</h2>
+                        <div class="price-box">
+                            <span class="currency">$</span>
+                            <span class="amount">0</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li class="feature-item">5 Self test quizzes per topic</li>
+                        <li class="feature-item">12 Video lectures</li>
+                        <li class="feature-item">Basic problem-solving guides</li>
+                        <li class="feature-item">Community forum access</li>
+                    </ul>
+                    <button class="cta-button" data-plan="free">Start Learning</button>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="popular-tag">RECOMMENDED</div>
+                    <div class="card-header">
+                        <h2 class="plan-name">Advanced Learning</h2>
+                        <div class="price-box">
+                            <span class="old-price">$74</span>
+                            <span class="currency">$</span>
+                            <span class="amount">50</span>
+                        </div>
+                    </div>
+                    <ul class="features">
+                        <li class="feature-item">20 comprehensive quizzes per topic</li>
+                        <li class="feature-item">50+ detailed video lectures</li>
+                        <li class="feature-item">50+ downloadable resources</li>
+                        <li class="feature-item">Formula sheets & cheat sheets</li>
+                        <li class="feature-item">100+ practice problems</li>
+                        <li class="feature-item">Course completion certificate</li>
+                        <li class="feature-item">Interactive workbook access</li>
+                    </ul>
+                    <button class="cta-button" data-plan="premium">Unlock Premium Access</button>
                 </div>
             </div>
-            <button id="restart-btn" onclick="location.reload()">Restart Quiz</button>
+            <div style="text-align: center; margin-top: 2rem;">
+                <button id="restart-btn" onclick="location.reload()">Restart Quiz</button>
+            </div>
         </div>
 
         <!-- Donate Section -->
