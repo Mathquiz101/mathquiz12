@@ -237,10 +237,7 @@ function getPerformanceRating(percentage) {
 // Button click handlers for premium product
 document.querySelectorAll('.cta-button').forEach(button => {
     button.addEventListener('click', function(e) {
-        const plan = this.getAttribute('data-plan');
-        const message = plan === 'free' 
-            ? 'Welcome to Basic Mathematics Learning! Start your journey today.'
-            : 'Welcome to Premium Mathematics Learning! Unlock all advanced features for $50';
+        const message = 'Welcome to Premium Mathematics Learning! Complete your purchase to unlock all advanced features for $99.99';
         
         // Add click animation
         const ripple = document.createElement('div');
