@@ -183,7 +183,10 @@ function endQuiz() {
     
     const resultEl = document.querySelector('.result');
     const percentage = (score / questions.length) * 100;
+    const premiumProduct = document.getElementById('premium-product');
+    const congratsMessage = document.getElementById('congrats-message');
     
+    // Basic result display
     resultEl.innerHTML = `
         <h2>Quiz Complete!</h2>
         <p>Your score: ${score} out of ${questions.length}</p>
@@ -191,10 +194,35 @@ function endQuiz() {
         <p>Performance Rating: ${getPerformanceRating(percentage)}</p>
     `;
 
-    // Show premium product section
-    const premiumProduct = document.getElementById('premium-product');
-    if (premiumProduct) {
+    // Show premium content only if score is above 50%
+    if (percentage >= 50) {
+        congratsMessage.classList.remove('hide');
+        congratsMessage.innerHTML = `
+            <div class="success-message">
+                <h2>🎉 Congratulations! 🎉</h2>
+                <p>You've successfully passed the quiz and unlocked access to our Premium Mathematics Learning Package!</p>
+                <div class="special-offer">
+                    <h3>🌟 Special Limited Time Offer 🌟</h3>
+                    <p>Get lifetime access to our Premium Package for just</p>
+                    <div class="price-display">
+                        <span class="original-price">$149.99</span>
+                        <span class="current-price">$99.99</span>
+                    </div>
+                    <p class="urgency-message">⚡ Hurry! This offer expires in 6 days ⚡</p>
+                </div>
+            </div>
+        `;
         premiumProduct.classList.remove('hide');
+    } else {
+        congratsMessage.innerHTML = `
+            <div class="retry-message">
+                <h2>Keep Going!</h2>
+                <p>Score 50% or higher to unlock our Premium Mathematics Learning Package.</p>
+                <p>Feel free to try again!</p>
+            </div>
+        `;
+        congratsMessage.classList.remove('hide');
+        premiumProduct.classList.add('hide');
     }
 }
 
