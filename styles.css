@@ -115,47 +115,6 @@ button:hover {
     display: none;
 }
 
-.next-level-link {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #f8f9fa;
-    border: 2px dashed #3498db;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.next-level-link a {
-    color: #2ecc71;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 18px;
-    word-break: break-all;
-    display: inline-block;
-    margin: 10px 0;
-}
-
-.next-level-link .copy-btn {
-    background-color: #2ecc71;
-    margin-top: 10px;
-}
-
-.save-reminder {
-    color: #e74c3c;
-    font-size: 14px;
-    margin-top: 10px;
-    font-style: italic;
-}
-
-.celebration {
-    animation: celebrate 1s ease-in-out;
-}
-
-@keyframes celebrate {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
-
 /* Donate Section */
 .donate-section {
     margin-top: 30px;
@@ -211,5 +170,112 @@ button:hover {
     .wave-logo,
     .gtbank-logo {
         width: 80px;
+    }
+}
+
+/* Premium Product Styles */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.pricing-card {
+    background: #ffffff;
+    border-radius: 1rem;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.pricing-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #2b6cb0, #805ad5);
+    opacity: 0.5;
+}
+
+.plan-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(120deg, #2b6cb0, #805ad5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.price-box {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2b6cb0;
+    position: relative;
+    display: inline-flex;
+    align-items: baseline;
+}
+
+.currency {
+    font-size: 1.5rem;
+    margin-right: 0.25rem;
+}
+
+.old-price {
+    position: absolute;
+    top: -1rem;
+    right: -2rem;
+    font-size: 1.2rem;
+    color: #a0aec0;
+    text-decoration: line-through;
+    transform: rotate(-10deg);
+}
+
+.popular-tag {
+    position: absolute;
+    top: 1rem;
+    right: -4rem;
+    background: #48bb78;
+    color: white;
+    padding: 0.5rem 4rem;
+    transform: rotate(45deg);
+    font-size: 0.9rem;
+    font-weight: 600;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: linear-gradient(45deg, #2b6cb0, #805ad5);
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    filter: brightness(1.1);
+}
+
+/* Add ripple animation for buttons */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(4);
+        opacity: 0;
     }
 }
