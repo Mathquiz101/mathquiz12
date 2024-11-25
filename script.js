@@ -200,15 +200,25 @@ function endQuiz() {
         congratsMessage.innerHTML = `
             <div class="success-message">
                 <h2>🎉 Congratulations! 🎉</h2>
-                <p>You've successfully passed the quiz and unlocked access to our Premium Mathematics Learning Package!</p>
+                <p>You've successfully passed the quiz!</p>
+                <div class="end-tier-notice">
+                    <h3>🌟 You've Reached the End of Free Tier 🌟</h3>
+                    <p>You've completed all available free content. To continue your learning journey and access advanced materials, upgrade to our Premium Package!</p>
+                </div>
                 <div class="special-offer">
-                    <h3>🌟 Special Limited Time Offer 🌟</h3>
-                    <p>Get lifetime access to our Premium Package for just</p>
+                    <h3>🎯 Exclusive Limited Time Offer 🎯</h3>
+                    <p>Unlock lifetime access to our Premium Mathematics Learning Package:</p>
+                    <ul class="premium-features">
+                        <li>📚 100+ Advanced Practice Problems</li>
+                        <li>🎥 HD Video Explanations</li>
+                        <li>📝 Downloadable Study Materials</li>
+                        <li>🏆 Certificate of Completion</li>
+                    </ul>
                     <div class="price-display">
                         <span class="original-price">$149.99</span>
                         <span class="current-price">$99.99</span>
                     </div>
-                    <p class="urgency-message">⚡ Hurry! This offer expires in 6 days ⚡</p>
+                    <p class="urgency-message">⚡ Special discount expires in 6 days ⚡</p>
                 </div>
             </div>
         `;
