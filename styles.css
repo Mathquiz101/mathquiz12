@@ -406,3 +406,18 @@ button:hover {
     background: #48bb78;
     border-radius: 50%;
 }
+
+.motivation-message {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: linear-gradient(145deg, #e6f7ff, #f0f9ff);
+    border-radius: 0.8rem;
+    border: 2px solid #bde0fe;
+}
+
+.motivation-message p {
+    color: #2b6cb0;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
