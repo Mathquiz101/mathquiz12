@@ -195,7 +195,7 @@ function endQuiz() {
     `;
 
     // Show premium content only if score is above 50%
-    if (percentage >= 50) {
+    if (percentage > 50) {
         congratsMessage.classList.remove('hide');
         congratsMessage.innerHTML = `
             <div class="success-message">
@@ -226,9 +226,13 @@ function endQuiz() {
     } else {
         congratsMessage.innerHTML = `
             <div class="retry-message">
-                <h2>Keep Going!</h2>
-                <p>Score 50% or higher to unlock our Premium Mathematics Learning Package.</p>
-                <p>Feel free to try again!</p>
+                <h2>Keep Practicing!</h2>
+                <p>You need to score above 50% to unlock the premium content.</p>
+                <p>Feel free to try again and improve your score!</p>
+                <div class="motivation-message">
+                    <p>💪 Practice makes perfect!</p>
+                    <p>📚 Review the concepts and come back stronger!</p>
+                </div>
             </div>
         `;
         congratsMessage.classList.remove('hide');
