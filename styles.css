@@ -360,3 +360,49 @@ button:hover {
     50% { opacity: 0.6; }
     100% { opacity: 1; }
 }
+
+.end-tier-notice {
+    background: linear-gradient(145deg, #fff9e6, #fff4e6);
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    margin: 1.5rem 0;
+    border: 2px solid #ffd700;
+}
+
+.end-tier-notice h3 {
+    color: #b7791f;
+    margin-bottom: 1rem;
+}
+
+.end-tier-notice p {
+    color: #744210;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.premium-features {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    text-align: left;
+}
+
+.premium-features li {
+    margin: 0.8rem 0;
+    color: #2d3748;
+    font-size: 1.1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.premium-features li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.8rem;
+    height: 0.8rem;
+    background: #48bb78;
+    border-radius: 50%;
+}
